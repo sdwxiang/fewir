@@ -86,7 +86,7 @@ fn main() {
             params.decrypt
         )
     } else if in_dir.len() != 0 {
-        let dir = DirFileIter::new(in_dir.as_str());
+        let dir = DirFileIter::new(in_dir.as_str()).expect("open input dir failed.");
         for in_file_name in dir {
             copy_file(
                 in_file_name.as_str(),

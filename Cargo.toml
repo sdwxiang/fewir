@@ -1,0 +1,13 @@
+[package]
+name = "aes-cmd"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+aes = "0.8.4"
+argh = "0.1.12"
+chrono = "0.4.34"
+cpufeatures = "0.2.12"
+sha3 = "0.10.8"

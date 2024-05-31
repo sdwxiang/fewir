@@ -36,7 +36,7 @@ struct AesParam {
     #[argh(short = 'k', option)]
     key: Option<String>,
 
-    /// cache size (kb)
+    /// cache size (MB)
     #[argh(option)]
     cache: Option<usize>
 }
@@ -75,7 +75,7 @@ fn main() {
         }
     }
 
-    let mut cipher = BuffAesCipher::new(params.key.unwrap().as_str(), params.cache.unwrap_or(0) * 1024);
+    let mut cipher = BuffAesCipher::new(params.key.unwrap().as_str(), params.cache.unwrap_or(0) * 1024 * 1024);
 
     if in_file_name.len() != 0 {
         copy_file(
